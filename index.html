@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
+    <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./fonts/fonts.css"/>
     <link rel="stylesheet" href="./styles/style.css"/>
-    <link rel="stylesheet" href="./styles/global.css">
   </head>                                              
   <body>                                               
     <header class="header">                            
@@ -19,7 +19,7 @@
           </li>
 
           <li class="header__links-list-items">
-            <a class="header__links header__links_different-decoration">посмотреть лоты</a>
+            <a class="header__links">посмотреть лоты</a>
           </li>
 
           <li class="header__links-list-items">
@@ -37,9 +37,9 @@
       </a>
 
       <address class="address header__address">
-            <a href="tel:+99995555555" class="header__links_different-decoration">+9 999 555 5555</a>
-            <a href="mailto:info@sobaka.ge" class="header__links_different-decoration">info@sobaka.ge</a>
-            <p>наб. Принсенграхт 263-<br>265, Амстердам</p> <!--this little br took me way too long to figure out than i would like to admit 🐑-->
+            <a href="tel:+99995555555">+9 999 555 5555</a>
+            <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+            <p>наб. Принсенграхт 263-<br>265, Амстердам</p>
       </address>
 
     </header>
@@ -139,61 +139,59 @@
         </div>    
         <div>
           <h2 class="about__title">Об аукционе</h2>
-          <p class="about__text">Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, созданные любителями?</p>
-          <p class="about__text about__text_padding">Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря
-            <br>на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную культуру. Когда в эти вещи не верил никто, продолжали верить их создатели. И сейчас эти лоты стали культовыми. </p>
+          <p class="about__text">
+            Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, созданные любителями?
+          </p>
+          <p class="about__text">
+            Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря
+            на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную культуру. Когда в эти вещи не верил никто, продолжали верить их создатели. И сейчас эти лоты стали культовыми. 
+          </p>
         </div>
       </section>
 
     </main>
     <footer class="footer">
       <address class="address">
-        <a href="tel:+99995555555" class="header__links_different-decoration">+9 999 555 5555</a>
-        <a href="mailto:info@sobaka.ge" class="header__links_different-decoration">info@sobaka.ge</a> <!--after redoing header i think header__links_different-decoration will do better here instead of contacts__text-->
-        <p class="header__links_different-decoration">наб. Принсенграхт 263-<br> 265, Амстердам</p>   <!--in hindsight should've called it something different 🐑-->
+        <a href="tel:+99995555555">+9 999 555 5555</a>
+        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p>наб. Принсенграхт 263-<br> 265, Амстердам</p>  
       </address>
       <nav class="footer__menu">
-        <ul class="no__bullet-list">
-          <li class="footer__menu-link_innactive">
-            <a class="footer__menu-list-items">главная</a>
+        <ul class="footer__menu-list">
+          <li class="footer__menu-list-items">
+            <a class="footer__menu-link footer__menu-link_innactive" href="#0">главная</a>
           </li>
-          <li>
-            <a class="footer__menu-link header__links_different-decoration" href="#0">посмотреть лоты</a>
+          <li class="footer__menu-list-items">
+            <a class="footer__menu-link" href="#0">посмотреть лоты</a>
           </li>
-          <li>
-            <a class="footer__menu-link header__links_different-decoration" href="#0">об аукционе</a>
+          <li class="footer__menu-list-items">
+            <a class="footer__menu-link" href="#0">об аукционе</a>
           </li>
         </ul>        
       </nav>
-      <ul class="footer__social-list no__bullet-list">
-        <li class="footer__social-list-items">
-          <a class="footer__social-link" href="#0">
-            <img 
-              src="./images/yt.svg"
-              class="footer__social-icon"
-              alt="YouTube"
-              >
-          </a>
-        </li>
-        <li>
-          <a class="footer__social-link" href="#0">
-            <img
-              src="./images/vk.svg"
-              class="footer__social-icon"
-              alt="Вконтакте"
+      <div class="footer__social-list">
+        <a href="#0">
+          <img 
+            src="./images/yt.svg"
+            class="footer__social-icon"
+            alt="YouTube"
             >
-          </a>
-        </li>
-        <li>
-          <a class="footer__social-link" href="#0">
-            <img
-              src="./images/pinterest.svg"
-              class="footer__social-icon"
-              alt="Pinterest"
-            >
-          </a>
-        </li>
-      </ul>
+        </a>
+        <a href="#0">
+          <img
+            src="./images/vk.svg"
+            class="footer__social-icon"
+            alt="Вконтакте"
+          >
+        </a>
+        <a href="#0">
+          <img
+            src="./images/pinterest.svg"
+            class="footer__social-icon"
+            alt="Pinterest"
+          >
+        </a>
+      </div>
     </footer>
   </body>
 </html>

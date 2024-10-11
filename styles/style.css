@@ -8,7 +8,7 @@
 }
 
 .header__menu {
-    padding: 44px 32px 40px 26px; /*44px 36px 39px 26.52px in figma but those look better in pixel perfect 🐑*/
+    padding: 44px 32px 40px 26px; /*44px 36px 39px 26.52px*/
 }
 
 .header__links-list {
@@ -36,11 +36,6 @@
     text-decoration: none;
 }
 
-.header__links_different-decoration  {
-    letter-spacing: 0.18px; 
-    text-underline-offset: 4px; 
-}
-
 .header__logo-link {
     display: block;
     width: 145px;
@@ -62,6 +57,8 @@
     font-weight: 400;
     line-height: 24px;
     flex-direction: column;
+    align-items: flex-start;
+    text-underline-offset: 4px;
 }
 
 .header__address {
@@ -207,7 +204,6 @@
 
 .lots__card-list-items {
     width: 334px;
-    max-height: 563px; /* Здесь лучше использовать максимальную чтобы в .card работало height: 100% и не вылазило лишнее снизу которое можно видеть если использовать негатив внутри пикселя 🐑 */
     list-style: none;
 }
 
@@ -269,7 +265,7 @@
     display: block;
     max-width: 192px;
     width: 100%;
-    margin: 32px 0 2px 40px;
+    margin: 28px 0 2px 40px;
     font-weight: 400px;
     font-size: 20px;
     line-height: 120%;
@@ -277,19 +273,22 @@
     font-family: Raleway, sans-serif;
     font-style: normal;
     text-decoration: underline;
+    text-underline-offset: 4px; /* !!! */
 }
 
 /* About */
-.about { /* Прошлая система отказывалась работать с текстом как нужно, пришлось использовать падинги, можно лучше но мало опыта работы с templates 🐑*/
-    display: flex;
+.about { 
+    display: grid;
+    grid-template-columns: 334px 1fr;
+    grid-template-rows: 1fr min-content;
+    gap: 10px 20px;
     background-color: #fff;
-    justify-content: space-between;
     width: 100%;
     padding: 35px 24px;
 }
 
 .about__logo_position {
-    padding: 57.8px 0px 0px 47px;
+    padding: 58.4px 0px 0px 47px;
 }
   
 .about__logo {
@@ -317,19 +316,18 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    padding: 157px 55px 100px 0px;
+    padding: 160px 0px 100px 5px;
 }
   
 .about__text {
     max-width: 690px;
     width: 100%;
-    padding-bottom: 0;
     color: #000;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    gap: 24px;
-    padding-bottom: 25px; 
+    text-align: start;
+    margin: 0px 0px 25px 5px;
 }
 
 /* Footer */
@@ -337,21 +335,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    padding: 64px 48px 0px;
-    margin-bottom: 88px;
+    padding: 53px 50px 90px;
+    background-color: #fff;
     /*padding: 58px 51px 88px 51px; 58px 54px 0px 51px;*/
-}
-
-.address {
-    align-items: flex-start;
 }
 
 .footer__menu {
     text-align: center;
+    padding: 0px 0px 0px 0px;
 }
 
 .footer__menu-list-items {
-    text-align: center;
     list-style: none;
 }
 
@@ -363,7 +357,7 @@
     font-style: normal;
     line-height: normal;
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 4px;
 }
 
 .footer__social-list {
@@ -380,15 +374,15 @@
     text-decoration: none;
 }
 
-.footer__social-link {
-    display: block;
+.footer__social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 48px;
 }
-
-.no__bullet-list {
-    list-style-type: none;
-}
-
+  
 .footer__social-icon {
-    height: 48px;
     width: 48px;
+    height: 48px;
 }
