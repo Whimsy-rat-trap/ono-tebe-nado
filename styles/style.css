@@ -31,8 +31,12 @@
     list-style: none;
 }
 
+.link__active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 
-.header__links_innactive {
+.link__innactive {
     text-decoration: none;
 }
 
@@ -288,7 +292,7 @@
 }
 
 .about__logo_position {
-    padding: 58.4px 0px 0px 47px;
+    padding: 0px 0px 0px 47px;
 }
   
 .about__logo {
@@ -316,7 +320,7 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    padding: 160px 0px 100px 5px;
+    padding: 100px 0px 100px 5px;
 }
   
 .about__text {
@@ -335,7 +339,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    padding: 53px 50px 90px;
+    padding: 110px 50px 90px;
     background-color: #fff;
     /*padding: 58px 51px 88px 51px; 58px 54px 0px 51px;*/
 }
@@ -346,18 +350,14 @@
 }
 
 .footer__menu-list-items {
-    list-style: none;
-}
-
-.footer__menu-link {
     color: #000;
     font-family: Raleway, sans-serif;
     font-weight: 400;
     font-size: 18px;
     font-style: normal;
     line-height: normal;
-    text-decoration: underline;
     text-underline-offset: 4px;
+    list-style: none;
 }
 
 .footer__social-list {
@@ -368,10 +368,6 @@
 
 .footer__social-list-items {
     list-style: none;
-}
-
-.footer__menu-link_innactive{
-    text-decoration: none;
 }
 
 .footer__social-list {
